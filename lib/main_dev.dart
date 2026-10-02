@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:qmbuddy/core/routing/customer_router.dart';
+import 'core/theme/app_theme.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -16,12 +18,11 @@ class QmBuddyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
+    return MaterialApp.router(
       title: 'QMBUDDY ($flavor)',
-      home: Scaffold(
-        appBar: AppBar(title: Text('QMBUDDY Customer/Shop/Staff - $flavor')),
-        body: const Center(child: Text('Unified App')),
-      ),
+      theme: AppTheme.lightTheme,
+      debugShowCheckedModeBanner: false,
+      routerConfig: customerRouter,
     );
   }
 }

@@ -9,8 +9,9 @@ class AppTheme {
   static ThemeData get lightTheme {
     return ThemeData(
       useMaterial3: true,
+      scaffoldBackgroundColor: const Color(0xFFFFFFFF), // White theme
       colorScheme: ColorScheme.fromSeed(
-        seedColor: const Color(0xFFE53935), // Primary Red (like KFC)
+        seedColor: const Color(0xFFC13C01), // Primary Color
         brightness: Brightness.light,
       ),
       
